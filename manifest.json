@@ -1,0 +1,21 @@
+{
+    "name": "GovLingo",
+    "version": "1.0",
+    "description": "A translation tool, to translate english contents on webpage to hindi",
+    "permissions": ["scripting", "tabs"],
+    "host_permissions": ["*://*/*"],
+    "background": {
+        "service_worker": "scripts/background.js"
+    },
+    "content_scripts": [
+        {
+            "js": ["scripts/content.js"],
+            "matches": ["*://*/*"]
+        }
+    ],
+    "action": {
+        "default_title": "GovLingo",
+        "default_popup": "popup/popup.html"
+    },
+    "manifest_version": 3
+  }
