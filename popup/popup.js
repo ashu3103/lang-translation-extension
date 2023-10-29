@@ -17,7 +17,7 @@ button.addEventListener("click", () => {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
         if (tabs && tabs.length > 0){
             const activeTab = tabs[0];
-            const dataToSend = {action: "Scan"};
+            const dataToSend = {action: "ScanPage"};
             print("Sending Message");
             chrome.scripting.executeScript({
                 target : {tabId : activeTab.id},
